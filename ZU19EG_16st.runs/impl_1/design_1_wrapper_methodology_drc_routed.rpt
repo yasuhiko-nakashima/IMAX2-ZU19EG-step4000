@@ -1,0 +1,959 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Mar 30 11:49:27 2023
+| Host         : cad105.naist.jp running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xczu19eg-ffvb1517-2-i
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 49
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 45         |
+| CLKC-40   | Advisory         | Substitute PLLE4 for MMCME4 check                  | 1          |
+| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC         | 1          |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock design_1_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_pl_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock design_1_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin design_1_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[30]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[34]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[37]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[42]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[50]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[51]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[58]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[59]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur0_reg[61]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur1_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/ur1_reg[16]/CLR
+ (the first 15 of 396 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 842 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 842 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__10, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage2_inst/exe1h/ex2d_r/q_reg[6]/CLR
+ (the first 15 of 598 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__11, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[25]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[27]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[28]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[30]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[34]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[35]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/ur0_reg[36]/CLR
+ (the first 15 of 450 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__11_replica, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[28]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[3]/CLR
+ (the first 15 of 239 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__11_replica_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[25]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[26]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[27]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[29]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[30]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[31]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/exe1l/ex2d_r/q_reg[9]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[3]/CLR
+ (the first 15 of 153 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__12, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 842 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__13, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage2_inst/exe1h/ex2d_r/q_reg[6]/CLR
+ (the first 15 of 598 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__14, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage2_inst/exe1h/ex2d_r/q_reg[6]/CLR
+ (the first 15 of 22 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 842 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage2_inst/exe1h/ex2d_r/q_reg[6]/CLR
+ (the first 15 of 22 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/exe1h/ex2d_r/q_reg[6]/CLR
+ (the first 15 of 22 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__4_replica, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[25]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[27]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[28]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[30]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[34]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[35]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/ur0_reg[36]/CLR
+ (the first 15 of 271 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__4_replica_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc2_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc2_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc2_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[3]/CLR
+ (the first 15 of 305 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 842 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[27]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[28]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[47]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[49]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[53]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[54]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[56]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[57]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur3_reg[9]/CLR
+ (the first 15 of 218 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__6_replica, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/exe1l/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 266 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__6_replica_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc0_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc0_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc0_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc0_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmapc1_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/spu1/ur0_reg[11]/CLR
+ (the first 15 of 358 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__7, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[23]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[24]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/exe1h/ex2d_r/q_reg[6]/CLR
+ (the first 15 of 22 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__8, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage2_inst/exe1h/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 842 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__9, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[27]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[28]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[30]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[37]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[42]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[43]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/ur0_reg[44]/CLR
+ (the first 15 of 255 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__9_replica, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/exe1l/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 228 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__9_replica_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[22]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/fpu1h/ex1_d_csa_c_r/q_reg[6]/CLR
+ (the first 15 of 38 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2__9_replica_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[3]/CLR
+ (the first 15 of 321 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2_replica, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/exe1l/ex2d_r/q_reg[22]/CLR
+ (the first 15 of 266 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex2d_r/q[31]_i_2_replica_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmanc6_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmanc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc0_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[3]/CLR
+ (the first 15 of 180 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[0].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 159 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[2].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__10, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[11].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 400 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__11, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__12, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__13, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[14].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 400 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__14, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[15].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 976 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[3].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[4].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 976 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#38 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[5].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 400 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#39 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[6].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#40 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#41 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__7, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[4]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[5]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[6]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[7]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_exp_r/q_reg[8]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_frac_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_frac_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_frac_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_frac_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_frac_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/fpu2h/ex2_d_frac_r/q_reg[15]/CLR
+ (the first 15 of 384 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#42 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__7_replica_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage3_inst/exe2l/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 164 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#43 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__7_replica_comp, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc4_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc4_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc4_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc5_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc5_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc5_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc5_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc6_r/q_reg[3]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[2]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/spu1/sfma_sfmapc7_r/q_reg[3]/CLR
+ (the first 15 of 428 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#44 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__8, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[9].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#45 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/emax6_0/inst/fsm/ex3d_r/q[31]_i_2__9, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[0]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[10]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[11]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[12]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[13]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[14]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[15]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[16]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[17]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[18]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[19]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[1]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[20]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[21]/CLR,
+design_1_i/emax6_0/inst/EMAX6_UNIT[10].unit/stage3_inst/exe2h/ex3d_r/q_reg[22]/CLR
+ (the first 15 of 156 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+CLKC-40#1 Advisory
+Substitute PLLE4 for MMCME4 check  
+The MMCME4 cell design_1_i/clk_wiz_0/inst/mmcme4_adv_inst has a single input clock whose source driver, UNKNOWN, is not optimally located and the MMCM has a configuration which could be accommodated by a PLL.  Consider changing the MMCM to a PLL which could align better with the input clock driver.
+Related violations: <none>
+
+CLKC-56#1 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell design_1_i/clk_wiz_0/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+

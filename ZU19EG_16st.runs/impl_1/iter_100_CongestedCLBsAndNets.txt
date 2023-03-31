@@ -1,0 +1,8 @@
+List of CLB Tiles
+CLEM_X1Y280
+CLEL_R_X1Y280
+
+List of Congested Nets
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/lmring/regv_ear2_reg[189][24]
+design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/lmring/regv_ear2_reg[189][22]
+

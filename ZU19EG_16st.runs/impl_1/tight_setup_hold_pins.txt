@@ -1,0 +1,32 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/ex4o_reg[58]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/ex4o_reg[62]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[7].unit/stage2_inst/ex4o_reg[56]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/ex4o_reg[49]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage1_inst/ea1b_reg[9]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[8].unit/stage2_inst/ex4o_reg[35]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage5_inst/fb_reg[593]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/ex4o_reg[48]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/ex4o_reg[47]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/ex4o_reg[62]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                            design_1_i/emax6_0/inst/fsm/axring_top_buf/queue_reg[0][277]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                            design_1_i/emax6_0/inst/fsm/axring_top_buf/queue_reg[0][147]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/ex4o_reg[44]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[417]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[759]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage5_inst/fb_reg[855]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage5_inst/fb_reg[849]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                    design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[1016]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage2_inst/ex4o_reg[52]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[233]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage5_inst/fb_reg[589]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage5_inst/fb_reg[337]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[747]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                    design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage1_inst/ea1b_reg[15]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                      design_1_i/emax6_0/inst/EMAX6_UNIT[1].unit/stage4_inst/tx1_reg[53]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[749]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                      design_1_i/emax6_0/inst/EMAX6_UNIT[12].unit/stage5_inst/fb_reg[77]/D|
+| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |                                     design_1_i/emax6_0/inst/EMAX6_UNIT[13].unit/stage5_inst/fb_reg[742]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
